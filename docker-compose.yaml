@@ -1,0 +1,25 @@
+version: '3'
+services:
+  rabbitmq:
+    image: "rabbitmq:3-management"
+    container_name: "rabbitmq"
+    ports:
+      - "5672:5672"
+      - "15672:15672"  # RabbitMQ management console
+    environment:
+      RABBITMQ_DEFAULT_USER: rabbitmq
+      RABBITMQ_DEFAULT_PASS: rabbitmq
+
+  spring-app:
+    build:
+      context: .
+    container_name: "spring-app"
+    ports:
+      - "8080:8080"
+    depends_on:
+      - rabbitmq
+    environment:
+      SPRING_RABBITMQ_HOST: rabbitmq  # Ensure this matches the RabbitMQ service name
+      SPRING_RABBITMQ_PORT: 5672
+      SPRING_RABBITMQ_USERNAME: rabbitmq
+      SPRING_RABBITMQ_PASSWORD: rabbitmq
