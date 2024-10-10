@@ -15,6 +15,6 @@ public class Bindings {
         return BindingBuilder
                 .bind(exampleQueue)
                 .to(directExchange)
-                .with("push");
+                .with("key");
     }
 }

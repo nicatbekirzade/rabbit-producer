@@ -10,7 +10,7 @@ public class ExchangeConfiguration {
 
     @Bean
     public DirectExchange directExchange() {
-        return new DirectExchange("x.example");
+        return new DirectExchange("devfest");
     }
 
 }

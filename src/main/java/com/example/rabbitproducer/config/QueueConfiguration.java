@@ -11,7 +11,7 @@ public class QueueConfiguration {
 
     @Bean
     Queue exampleQueue() {
-        return QueueBuilder.durable("q.example_queue")
+        return QueueBuilder.durable("devfest")
                 .build();
     }
 }
