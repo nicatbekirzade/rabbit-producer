@@ -20,7 +20,7 @@ public class ProducerController {
             @RequestParam("messageSize") Integer messageSize) {
 
         for (int i = 0; i < messageSize; i++) {
-            rabbitTemplate.convertAndSend("x.example", "push", message + " " + i);
+            rabbitTemplate.convertAndSend("devfest", "key", message + " " + i);
         }
     }
 }
