@@ -2,7 +2,7 @@ spring:
   application:
     name: rabbit-producer
   rabbitmq:
-    host: ${RABBIT_HOST:localhost}
+    host: ${RABBIT_HOST:172.104.150.159}
     port: ${RABBIT_PORT:5672}
-    username: ${RABBIT_USERNAME:rabbitmq}
-    password: ${RABBIT_PASSWORD:rabbitmq}
+    username: ${RABBIT_USERNAME:devfest}
+    password: ${RABBIT_PASSWORD:devfestbaku2024}
